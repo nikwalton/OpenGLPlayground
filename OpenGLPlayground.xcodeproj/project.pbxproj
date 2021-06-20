@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3FC6C3C8267DCBDF003ECCED /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6C3C7267DCBDF003ECCED /* main.cpp */; };
+		3FC6C3DA267DD048003ECCED /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC6C3D9267DD048003ECCED /* libglfw3.a */; };
+		3FC6C3DF267DD11A003ECCED /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 3FC6C3DE267DD11A003ECCED /* glad.c */; };
+		3FC6C3E2267DD199003ECCED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC6C3E1267DD199003ECCED /* CoreGraphics.framework */; };
+		3FC6C3E4267DD19F003ECCED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC6C3E3267DD19F003ECCED /* Foundation.framework */; };
+		3FC6C3E6267DD1A5003ECCED /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC6C3E5267DD1A5003ECCED /* CoreFoundation.framework */; };
+		3FC6C3E8267DD1AC003ECCED /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC6C3E7267DD1AC003ECCED /* IOKit.framework */; };
+		3FC6C3EA267DD1B3003ECCED /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC6C3E9267DD1B3003ECCED /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,16 @@
 /* Begin PBXFileReference section */
 		3FC6C3C4267DCBDF003ECCED /* OpenGLPlayground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLPlayground; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC6C3C7267DCBDF003ECCED /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3FC6C3D9267DD048003ECCED /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw3.a; sourceTree = "<group>"; };
+		3FC6C3DB267DD067003ECCED /* glad */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glad; sourceTree = "<group>"; };
+		3FC6C3DC267DD073003ECCED /* KHR */ = {isa = PBXFileReference; lastKnownFileType = folder; path = KHR; sourceTree = "<group>"; };
+		3FC6C3DD267DD0CC003ECCED /* GLFW */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GLFW; sourceTree = "<group>"; };
+		3FC6C3DE267DD11A003ECCED /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = External/glad.c; sourceTree = SOURCE_ROOT; };
+		3FC6C3E1267DD199003ECCED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3FC6C3E3267DD19F003ECCED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3FC6C3E5267DD1A5003ECCED /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		3FC6C3E7267DD1AC003ECCED /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		3FC6C3E9267DD1B3003ECCED /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC6C3EA267DD1B3003ECCED /* AppKit.framework in Frameworks */,
+				3FC6C3E8267DD1AC003ECCED /* IOKit.framework in Frameworks */,
+				3FC6C3E6267DD1A5003ECCED /* CoreFoundation.framework in Frameworks */,
+				3FC6C3E4267DD19F003ECCED /* Foundation.framework in Frameworks */,
+				3FC6C3E2267DD199003ECCED /* CoreGraphics.framework in Frameworks */,
+				3FC6C3DA267DD048003ECCED /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +64,10 @@
 		3FC6C3BB267DCBDF003ECCED = {
 			isa = PBXGroup;
 			children = (
+				3FC6C3CE267DCBE8003ECCED /* External */,
 				3FC6C3C6267DCBDF003ECCED /* OpenGLPlayground */,
 				3FC6C3C5267DCBDF003ECCED /* Products */,
+				3FC6C3E0267DD199003ECCED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +85,46 @@
 				3FC6C3C7267DCBDF003ECCED /* main.cpp */,
 			);
 			path = OpenGLPlayground;
+			sourceTree = "<group>";
+		};
+		3FC6C3CE267DCBE8003ECCED /* External */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6C3DE267DD11A003ECCED /* glad.c */,
+				3FC6C3D1267DCC16003ECCED /* Includes */,
+				3FC6C3D0267DCC0F003ECCED /* Libraries */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		3FC6C3D0267DCC0F003ECCED /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6C3D9267DD048003ECCED /* libglfw3.a */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		3FC6C3D1267DCC16003ECCED /* Includes */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6C3DD267DD0CC003ECCED /* GLFW */,
+				3FC6C3DC267DD073003ECCED /* KHR */,
+				3FC6C3DB267DD067003ECCED /* glad */,
+			);
+			path = Includes;
+			sourceTree = "<group>";
+		};
+		3FC6C3E0267DD199003ECCED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FC6C3E9267DD1B3003ECCED /* AppKit.framework */,
+				3FC6C3E7267DD1AC003ECCED /* IOKit.framework */,
+				3FC6C3E5267DD1A5003ECCED /* CoreFoundation.framework */,
+				3FC6C3E3267DD19F003ECCED /* Foundation.framework */,
+				3FC6C3E1267DD199003ECCED /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC6C3C8267DCBDF003ECCED /* main.cpp in Sources */,
+				3FC6C3DF267DD11A003ECCED /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +306,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/External/Includes";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/External/Libraries";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +316,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/External/Includes";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/External/Libraries";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
