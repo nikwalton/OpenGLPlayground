@@ -101,16 +101,15 @@ int main() {
 	//define triangle
 	// can make a rectangle by making a second triangle
 	float verticies[] = {
-		0.5f, 0.5f, 0.0f,
+		-0.5f,- 0.5f, 0.0f,
 		0.5f, -0.5f, 0.0f,
-		-0.5f, -0.5f, 0.0f,
-		-0.5f, 0.5f, 0.0f
+		0.0f, 0.5f, 0.0f
 	};
 	
 	//EBO allows us to only store unique verticies and then specify the order
 	unsigned int indices[] = { //start at 0 as usual
-		0, 1, 3, //first triangle
-		1, 2, 3 //second triangle
+		//0, 1, 3, //first triangle
+		//1, 2, 3 //second triangle
 	};
 	
 	unsigned int VBO, VAO, EBO;
@@ -142,7 +141,8 @@ int main() {
 		
 		glUseProgram(shaderProgram);
 		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		//glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
 		
 		glfwSwapBuffers(window);
